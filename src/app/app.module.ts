@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { TutoApremAngQ2Component } from './tuto-aprem-ang-q2/tuto-aprem-ang-q2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    TutoApremAngQ2Component
   ],
   imports: [
     BrowserModule,
