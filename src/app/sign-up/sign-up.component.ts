@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserProfileComponent } from '../user-profile/user-profile.component';
 
 @Component({
   selector: 'app-sign-up',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
+  email = 'http://eandry.fr';
+  age = 8
+  name = 'hodor'
 
   constructor() { }
+
   ngOnInit() {
   }
-  email = 'http://eandry.fr';
-
+  handleButton(event){
+    console.log(event)
+  }
 }
