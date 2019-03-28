@@ -4,3 +4,17 @@
 <app-user-profile 
     (usery)="handleButton($event)"
 ></app-user-profile>
+
+<ul *appIsMovieOk="isOkForMovie">
+    <li appHoverMoused>La Ligne Jaune</li>
+    <li>Vingt milliards de poissons sous les mers</li>
+    <li>Harry Potter à l'école des Banquiers</li>
+    <li>DUNK ErK</li>
+    <li>Alien VS Predator the Pre-Pre-Prequel</li>
+    <li>Chérie j'ai mangé tes gosses</li>
+</ul>
+
+<button (click)="listClicked()"
+>
+    Show Movies
+</button>

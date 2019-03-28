@@ -5,14 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { TutoApremAngQ2Component } from './tuto-aprem-ang-q2/tuto-aprem-ang-q2.component';
+import { HoverMousedDirective } from './hover-moused.directive';
+import { IsMovieOkDirective } from './is-movie-ok.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     UserProfileComponent,
-    TutoApremAngQ2Component
+    HoverMousedDirective,
+    IsMovieOkDirective
   ],
   imports: [
     BrowserModule,

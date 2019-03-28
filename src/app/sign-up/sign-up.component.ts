@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfileComponent } from '../user-profile/user-profile.component';
-
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -8,14 +7,17 @@ import { UserProfileComponent } from '../user-profile/user-profile.component';
 })
 export class SignUpComponent implements OnInit {
   email = 'http://eandry.fr';
-  age = 8
-  name = 'hodor'
-
-  constructor() { }
+  age = 8;
+  name = 'hodor';
+  isOkForMovie = false;
 
   ngOnInit() {
   }
   handleButton(event){
     console.log(event)
+  }
+
+  listClicked(){
+    
   }
 }
