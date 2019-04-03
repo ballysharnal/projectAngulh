@@ -7,6 +7,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HoverMousedDirective } from './hover-moused.directive';
 import { IsMovieOkDirective } from './is-movie-ok.directive';
+import { RouterModule } from '@angular/router';
+import { routes } from './app-routing.module';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +17,14 @@ import { IsMovieOkDirective } from './is-movie-ok.directive';
     SignUpComponent,
     UserProfileComponent,
     HoverMousedDirective,
-    IsMovieOkDirective
+    IsMovieOkDirective,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
