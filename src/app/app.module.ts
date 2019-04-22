@@ -10,6 +10,9 @@ import { IsMovieOkDirective } from './is-movie-ok.directive';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';
 import { MenuComponent } from './menu/menu.component';
+import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,15 @@ import { MenuComponent } from './menu/menu.component';
     UserProfileComponent,
     HoverMousedDirective,
     IsMovieOkDirective,
-    MenuComponent
+    MenuComponent,
+    CocktailListComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],

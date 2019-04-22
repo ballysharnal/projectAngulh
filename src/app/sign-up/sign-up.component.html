@@ -23,3 +23,36 @@
     Show Movies
 </button>
 
+<!-- TEMPLATE DRIVEN FORM QUEST -->
+<h1> TEMPLATE DRIVEN FORM QUEST </h1>
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+    <div>
+        <label for="user">User</label>
+        <input name="user" type="text" [(ngModel)]="model.user" 
+            required
+            minlength="4"
+            #user="ngModel"
+        >
+    <div *ngIf="user.invalid && myForm.submitted">
+        <span *ngIf="user.errors['required']">Le champ est requis</span>
+        <br>
+        <span *ngIf="user.errors['minlength']">Le champ user doit dépasser 4 caractères</span>
+        <br>  
+    </div>
+    <span *ngIf="boolLength != false && myForm.submitted">Le champ user ne doit pas dépasser 25 caractères</span>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input name="email" type="email" [(ngModel)]="model.email" 
+            required 
+            email 
+            #email="ngModel"
+        >
+    <div *ngIf="email.invalid && myForm.submitted">
+        <div *ngIf="email.errors['required']">Le champ est requis</div>
+        <div *ngIf="email.errors['email']">Le champ email est invalide</div>
+    </div>
+    </div>
+    <button type="submit">Sauvegarder</button>
+</form>
